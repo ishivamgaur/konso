@@ -1,0 +1,21 @@
+{
+  "name": "@konso/ai",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "openai": "^5.8.2",
+    "@anthropic-ai/sdk": "^0.56.0",
+    "@google/genai": "^1.10.0",
+    "ollama": "^0.5.17",
+    "@konso/core": "workspace:*"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@konso/cli",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "lint": "eslint src/",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "@konso/core": "workspace:*",
+    "@konso/browser": "workspace:*",
+    "@konso/terminal": "workspace:*",
+    "@konso/config": "workspace:*"
+  }
+}

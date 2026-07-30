@@ -1,0 +1,22 @@
+{
+  "name": "@konso/terminal",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "chalk": "^5.4.1",
+    "ora": "^8.2.0",
+    "cli-table3": "^0.6.5",
+    "cli-progress": "^3.12.0",
+    "@konso/core": "workspace:*"
+  }
+}

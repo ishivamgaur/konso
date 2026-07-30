@@ -1,0 +1,43 @@
+{
+  "name": "konso",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A terminal-based browser built with TypeScript",
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "browser",
+    "terminal",
+    "cli"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.1.2",
+    "eslint": "^10.8.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.2.0",
+    "prettier": "^3.9.6",
+    "tsx": "^4.23.1",
+    "turbo": "^2.10.7",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yaml}": [
+      "prettier --write"
+    ]
+  }
+}
