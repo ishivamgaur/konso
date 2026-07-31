@@ -313,11 +313,30 @@ export function extractContent(document: Node): PageContent {
 
   let text = walkNode(rootNode);
 
-  // Strip top navigation clutter on search result pages
-  if (text.includes("Web results")) {
-    const idx = text.indexOf("Web results");
-    text = text.slice(idx);
+  // Strip top navigation clutter on search result pages (case-insensitive)
+  const webResultsIndex = text.search(
+    /\b(?:WEB RESULTS|Web results|Search Results|Search results|Results on the web)\b/i,
+  );
+  if (webResultsIndex !== -1) {
+    const match = text
+      .slice(webResultsIndex)
+      .match(
+        /^\s*(?:WEB RESULTS|Web results|Search Results|Search results|Results on the web)\s*/i,
+      );
+    const matchLength = match ? match[0].length : 11;
+    text = text.slice(webResultsIndex + matchLength).trim();
+  } else {
+    // If exact header isn't found, fallback to stripping above 'Advanced Search' filter markers
+    const advancedSearchIndex = text.search(/\bAdvanced Search\b/i);
+    if (advancedSearchIndex !== -1 && advancedSearchIndex < 2000) {
+      const match = text.slice(advancedSearchIndex).match(/^\s*Advanced Search\s*/i);
+      text = text.slice(advancedSearchIndex + (match ? match[0].length : 15)).trim();
+    }
   }
+
+  // Remove stray Google search widgets and accessibility hints
+  text = text.replace(/About [0-9,\. ]+ results(?:\s*\([0-9,\. ]+ seconds?\))?\s*/gi, "");
+  text = text.replace(/Ctrl\+Shift\+[A-Z0-9]+ to select\s*/gi, "");
 
   // Clean up feedback / rating popups at bottom of search pages
   text = text.replace(/How would you rate your experience[\s\S]*/i, "").trim();
