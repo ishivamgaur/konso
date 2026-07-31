@@ -17,6 +17,7 @@
     "@konso/network": "workspace:*",
     "@konso/html": "workspace:*",
     "@konso/css": "workspace:*",
-    "@konso/renderer": "workspace:*"
+    "@konso/renderer": "workspace:*",
+    "@konso/utils": "workspace:*"
   }
 }

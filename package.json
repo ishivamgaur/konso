@@ -2,6 +2,7 @@
   "name": "konso",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@11.18.0",
   "description": "A terminal-based browser built with TypeScript",
   "type": "module",
   "scripts": {

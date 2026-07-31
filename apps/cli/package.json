@@ -17,6 +17,9 @@
     "@konso/core": "workspace:*",
     "@konso/browser": "workspace:*",
     "@konso/terminal": "workspace:*",
-    "@konso/config": "workspace:*"
+    "@konso/config": "workspace:*",
+    "@konso/utils": "workspace:*",
+    "@konso/renderer": "workspace:*",
+    "@konso/network": "workspace:*"
   }
 }

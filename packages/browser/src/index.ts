@@ -1,4 +1,5 @@
 /**
  * @konso/browser — Browser engine orchestration
  */
-export { Browser } from "./browser.js";
+export { BrowserController } from "./browser.js";
+export type { PageState } from "./browser.js";

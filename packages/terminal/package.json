@@ -17,6 +17,11 @@
     "ora": "^8.2.0",
     "cli-table3": "^0.6.5",
     "cli-progress": "^3.12.0",
-    "@konso/core": "workspace:*"
+    "@konso/core": "workspace:*",
+    "@konso/browser": "workspace:*",
+    "@konso/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/blessed": "^0.1.25"
   }
 }

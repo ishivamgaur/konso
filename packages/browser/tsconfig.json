@@ -10,6 +10,7 @@
     { "path": "../network" },
     { "path": "../html" },
     { "path": "../css" },
-    { "path": "../renderer" }
+    { "path": "../renderer" },
+    { "path": "../utils" }
   ]
 }
