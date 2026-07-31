@@ -2,7 +2,6 @@ node_modules
 dist
 *.tsbuildinfo
 .turbo
-.env
-.env.local
 coverage
 .konso
+config.bat
